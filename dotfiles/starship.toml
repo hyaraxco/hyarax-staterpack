@@ -51,7 +51,7 @@ format = "⏱️[$duration]($style)"
 disabled = false
 style = "bg:#1e1e2e"
 format = "[ $symbol]($style)"
-symbols = { unix = "" }
+symbols = { Macos = " " }
 
 [fill]
 symbol = " "
