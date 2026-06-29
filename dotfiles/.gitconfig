@@ -1,0 +1,51 @@
+[user]
+  name = Your Name
+  email = you@example.com
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = code -w
+  autocrlf = input
+
+[init]
+  defaultBranch = main
+
+[push]
+  autoSetupRemote = true
+
+[fetch]
+  prune = true
+
+[pull]
+  rebase = true
+
+[rebase]
+  autoStash = true
+
+[color]
+  ui = auto
+
+[alias]
+  s = status -sb
+  l = log --oneline --graph --decorate --all
+  lg = log --oneline --graph --decorate --all
+  a = add
+  aa = add --all
+  c = commit
+  cm = commit -m
+  ca = commit --amend
+  d = diff
+  ds = diff --staged
+  p = push
+  pf = push --force-with-lease
+  pl = pull --rebase
+  co = checkout
+  cob = checkout -b
+  b = branch
+  m = merge
+  r = rebase
+  ri = rebase -i
+  st = stash
+  sp = stash pop
+  sl = stash list
+  main = checkout main

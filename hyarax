@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+HYARAX_DIR="$(cd "$(dirname "$0")" && pwd)"
+source "${HYARAX_DIR}/lib.sh"
+
+usage() {
+  cat <<EOF
+${W}Hyarax Starterpack${N} — macOS Developer Bootstrap
+
+${B}Usage:${N}
+  ./hyarax ${G}install${N}    Install everything from scratch
+  ./hyarax ${G}doctor${N}     Verify all dependencies are installed
+  ./hyarax ${G}backup${N}     Backup existing configurations
+  ./hyarax ${G}restore${N}    Restore configurations from backup
+  ./hyarax ${G}update${N}     Update all managed software
+  ./hyarax ${G}uninstall${N}  Remove managed configurations
+
+${B}Options:${N}
+  -h, --help    Show this help message
+EOF
+  exit 0
+}
+
+if [[ $# -lt 1 ]]; then
+  usage
+fi
+
+case "${1:-}" in
+  install)
+    log_info "Starting full system bootstrap..."
+    "${HYARAX_DIR}/install.sh"
+    ;;
+  doctor)
+    "${HYARAX_DIR}/doctor.sh"
+    ;;
+  backup)
+    "${HYARAX_DIR}/backup.sh"
+    ;;
+  restore)
+    "${HYARAX_DIR}/restore.sh"
+    ;;
+  update)
+    "${HYARAX_DIR}/update.sh"
+    ;;
+  uninstall)
+    "${HYARAX_DIR}/uninstall.sh"
+    ;;
+  -h|--help)
+    usage
+    ;;
+  *)
+    log_error "Unknown command: $1"
+    usage
+    ;;
+esac

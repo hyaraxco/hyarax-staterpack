@@ -1,0 +1,5 @@
+# Backup files (machine-specific)
+backups/
+
+# OS
+.DS_Store
