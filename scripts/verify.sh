@@ -8,6 +8,9 @@ log_step "Verification"
 
 FAILED=0
 
+# Ensure common paths for commands installed during bootstrap
+export PATH="${HOME}/.bun/bin:/opt/homebrew/opt/openjdk/bin:${PATH}"
+
 verify() {
   local name="$1" cmd="$2"
   if command -v "$cmd" &>/dev/null; then

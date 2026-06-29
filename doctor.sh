@@ -8,6 +8,8 @@ log_step "Doctor — Dependency Check"
 
 FAILED=0
 
+export PATH="${HOME}/.bun/bin:/opt/homebrew/opt/openjdk/bin:${PATH}"
+
 check() {
   local name="$1" cmd="$2"
   if command -v "$cmd" &>/dev/null; then
