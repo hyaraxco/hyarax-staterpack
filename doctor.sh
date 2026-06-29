@@ -34,11 +34,19 @@ check_app() {
 log_info "Terminal"
 check "Ghostty"    "ghostty"
 check "Starship"   "starship"
-check "Zinit"      "zinit"
+check_zinit() {
+  if [[ -d "${HOME}/.local/share/zinit/zinit.git" ]]; then
+    printf "  ${G}✔${N} %s\n" "Zinit"
+  else
+    printf "  ${R}✘${N} %s\n" "Zinit"
+    FAILED=$((FAILED + 1))
+  fi
+}
+check_zinit
 
 # ── Browser ──────────────────────────────────────────────────────────────────
 log_info "Browser"
-check "Brave Browser" "brave-browser" 2>/dev/null || check_app "Brave Browser" "Brave Browser"
+check_app "Brave Browser" "Brave Browser"
 
 # ── CLI ──────────────────────────────────────────────────────────────────────
 log_info "CLI Tools"
@@ -81,6 +89,7 @@ check "9router"    "9router"
 # ── Networking ───────────────────────────────────────────────────────────────
 log_info "Networking"
 check "warp-cli"   "warp-cli"
+# warp-cli requires manual install from Cloudflare
 
 # ── Utilities ────────────────────────────────────────────────────────────────
 log_info "Utilities"
