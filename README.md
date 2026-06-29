@@ -9,7 +9,7 @@ A production-quality macOS developer bootstrap that transforms a fresh Apple Sil
 - **One-command setup** — `./hyarax install` installs everything
 - **Idempotent** — Safe to run multiple times
 - **Homebrew-first** — All packages managed through Brewfile
-- **Beautiful terminal** — Ghostty + Boo theme + Starship + Powerlevel10k
+- **Beautiful terminal** — Ghostty + Boo theme + Starship
 - **Modular** — Each tool category has its own script
 - **Backup & restore** — Dotfiles are safe with `bootstrap backup`
 - **Doctor** — Verify every dependency with `bootstrap doctor`
@@ -38,7 +38,7 @@ Restart your terminal and you're ready to code.
 ## What's Installed
 
 ### Terminal
-Ghostty · Boo Theme · Starship · Zinit · Powerlevel10k · JetBrains Mono Nerd Font
+Ghostty · Boo Theme · Starship · Zinit · JetBrains Mono Nerd Font
 
 ### Browser
 Brave Browser
