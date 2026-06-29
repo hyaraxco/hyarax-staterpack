@@ -24,19 +24,17 @@ fi
 # ── Post-install: OpenJDK symlink ────────────────────────────────────────────
 if cmd_exists java; then
   log_ok "Java already available"
-else
-  # Homebrew's openjdk is keg-only; symlink it
-  if [[ -d "/opt/homebrew/opt/openjdk/bin" ]]; then
-    sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk \
-      /Library/Java/JavaVirtualMachines/openjdk.jdk
-    for cmd in java javac jar; do
-      if [[ -f "/opt/homebrew/opt/openjdk/bin/${cmd}" ]] && ! cmd_exists "${cmd}"; then
-        sudo ln -sf "/opt/homebrew/opt/openjdk/bin/${cmd}" "/usr/local/bin/${cmd}"
-      fi
-    done
-    log_ok "OpenJDK symlinked"
-  fi
+elif [[ -d "/opt/homebrew/opt/openjdk/bin" ]]; then
+  export PATH="/opt/homebrew/opt/openjdk/bin:${PATH}"
+  export JAVA_HOME="/opt/homebrew/opt/openjdk"
+  log_ok "OpenJDK configured via PATH"
 fi
+
+# Ensure java is accessible for the rest of the install
+JAVA_LINE='export PATH="/opt/homebrew/opt/openjdk/bin:${PATH}"'
+append_if_missing "${HOME}/.zshrc" "${JAVA_LINE}"
+JAVA_HOME_LINE='export JAVA_HOME="/opt/homebrew/opt/openjdk"'
+append_if_missing "${HOME}/.zshrc" "${JAVA_HOME_LINE}"
 
 # ── fzf post-install ─────────────────────────────────────────────────────────
 if cmd_exists fzf; then

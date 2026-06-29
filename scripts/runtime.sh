@@ -10,12 +10,14 @@ if ! cmd_exists bun; then
   curl -fsSL https://bun.sh/install | bash
   log_ok "Bun installed"
 
+  # Add to PATH for current session
+  export PATH="${HOME}/.bun/bin:${PATH}"
+
   # Symlink node/npm/npx for compatibility
-  BUN_DIR="${HOME}/.bun/bin"
-  if [[ -d "${BUN_DIR}" ]]; then
-    ln -sf "${BUN_DIR}/bun" "${BUN_DIR}/node" 2>/dev/null || true
-    ln -sf "${BUN_DIR}/bun" "${BUN_DIR}/npm"  2>/dev/null || true
-    ln -sf "${BUN_DIR}/bun" "${BUN_DIR}/npx"  2>/dev/null || true
+  if [[ -d "${HOME}/.bun/bin" ]]; then
+    ln -sf "${HOME}/.bun/bin/bun" "${HOME}/.bun/bin/node" 2>/dev/null || true
+    ln -sf "${HOME}/.bun/bin/bun" "${HOME}/.bun/bin/npm"  2>/dev/null || true
+    ln -sf "${HOME}/.bun/bin/bun" "${HOME}/.bun/bin/npx"  2>/dev/null || true
     log_sub "Created node/npm/npx symlinks via Bun"
   fi
 else

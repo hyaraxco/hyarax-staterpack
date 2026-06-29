@@ -24,8 +24,8 @@ if cmd_exists mkcert; then
 
   # Install root CA if not already done
   if [[ ! -f "${HOME}/.local/share/mkcert/rootCA.pem" ]]; then
-    log_info "Installing mkcert root CA..."
-    mkcert -install 2>/dev/null || log_warn "Could not install mkcert root CA"
+    log_info "Installing mkcert root CA (sudo required)..."
+    sudo mkcert -install 2>/dev/null || log_warn "Could not install mkcert root CA (try: sudo mkcert -install)"
   fi
 else
   log_warn "mkcert should be installed via Brewfile"

@@ -7,8 +7,8 @@ source "${HYARAX_DIR}/lib.sh"
 # ── Zinit ────────────────────────────────────────────────────────────────────
 if [[ ! -d "${HOME}/.local/share/zinit" ]]; then
   log_info "Installing Zinit..."
-  bash -c "$(curl --fail --show-error --silent --location \
-    https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+  yes "n" | bash -c "$(curl --fail --show-error --silent --location \
+    https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)" 2>/dev/null || true
   log_ok "Zinit installed"
 else
   log_ok "Zinit already installed"
