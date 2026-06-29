@@ -23,13 +23,16 @@ if [[ -f "${ZINIT_HOME}/zinit.zsh" ]]; then
   zinit ice depth=1
   zinit light romkatv/powerlevel10k
 
-  zinit light zdharma-continuum/zsh-autosuggestions
+  zinit light zsh-users/zsh-autosuggestions
   zinit light zdharma-continuum/fast-syntax-highlighting
-  zinit light zdharma-continuum/zsh-completions
+  zinit light zsh-users/zsh-completions
 
   zinit ice as"completion"
   zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f "${HOME}/.p10k.zsh" ]] || source "${HOME}/.p10k.zsh"
 
 # ── Starship ──────────────────────────────────────────────────────────────────
 if command -v starship &>/dev/null; then
