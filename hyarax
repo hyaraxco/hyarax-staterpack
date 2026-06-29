@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-HYARAX_DIR="$(cd "$(dirname "$0")" && pwd)"
+_realpath() {
+  local path="$1"
+  while [[ -L "$path" ]]; do
+    local target
+    target="$(readlink "$path")"
+    [[ "$target" == /* ]] && path="$target" || path="$(dirname "$path")/$target"
+  done
+  echo "$path"
+}
+
+HYARAX_DIR="$(cd "$(dirname "$(_realpath "$0")")" && pwd)"
 source "${HYARAX_DIR}/lib.sh"
 
 usage() {
