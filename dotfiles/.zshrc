@@ -28,6 +28,11 @@ if [[ -f "${ZINIT_HOME}/zinit.zsh" ]]; then
   zinit snippet https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker
 fi
 
+# ── Starship ──────────────────────────────────────────────────────────────────
+if command -v starship &>/dev/null; then
+  eval "$(starship init zsh)"
+fi
+
 # ── fzf ───────────────────────────────────────────────────────────────────────
 if [[ -f "/opt/homebrew/opt/fzf/shell/completion.zsh" ]]; then
   source /opt/homebrew/opt/fzf/shell/completion.zsh 2>/dev/null || true
