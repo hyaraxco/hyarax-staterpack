@@ -1,8 +1,5 @@
 # ── Taps ─────────────────────────────────────────────────────────────────────
-tap "homebrew/cask-versions"
-tap "jandedobbeleer/oh-my-posh"
-tap "cilium/cilium"
-tap "9gag/9router"
+tap "decolua/9router"
 
 # ── Brew ────────────────────────────────────────────────────────────────────
 brew "git"
@@ -27,6 +24,7 @@ brew "btop"
 brew "atuin"
 brew "mkcert"
 brew "scrcpy"
+brew "9router"
 
 # ── Cask ────────────────────────────────────────────────────────────────────
 cask "ghostty"

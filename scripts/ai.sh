@@ -21,14 +21,8 @@ else
 fi
 
 # ── 9router ──────────────────────────────────────────────────────────────────
-if ! cmd_exists 9router; then
-  log_info "Installing 9router..."
-  if cmd_exists go; then
-    go install github.com/9gag/9router@latest 2>/dev/null || log_warn "Could not install 9router"
-  else
-    log_warn "Go is not installed. Install 9router manually:"
-    log_info "  brew tap 9gag/9router && brew install 9router"
-  fi
-else
+if cmd_exists 9router; then
   log_ok "9router already installed"
+else
+  log_warn "9router should be installed via Brewfile"
 fi

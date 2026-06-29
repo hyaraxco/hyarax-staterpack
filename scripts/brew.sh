@@ -17,7 +17,7 @@ fi
 # ── Install Brew bundle ──────────────────────────────────────────────────────
 if [[ -f "${BREWFILE}" ]]; then
   log_info "Installing Brew bundle..."
-  brew bundle --file="${BREWFILE}" --no-lock
+  brew bundle --file="${BREWFILE}"
   log_ok "Brew bundle installed"
 fi
 
