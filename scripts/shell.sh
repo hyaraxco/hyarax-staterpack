@@ -14,14 +14,6 @@ else
   log_ok "Zinit already installed"
 fi
 
-# ── Starship ─────────────────────────────────────────────────────────────────
-# Starship is installed via Brewfile, just verify
-if cmd_exists starship; then
-  log_ok "Starship installed"
-else
-  log_warn "Starship not found — should be installed via Brewfile"
-fi
-
 # ── Ghostty config ───────────────────────────────────────────────────────────
 GHOSTTY_DIR="${HOME}/Library/Application Support/com.mitchellh.ghostty"
 ensure_dir "${GHOSTTY_DIR}"

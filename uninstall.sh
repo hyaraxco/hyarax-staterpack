@@ -12,7 +12,7 @@ files_to_remove=(
   "${HOME}/.zshrc"
   "${HOME}/.gitconfig"
   "${HOME}/.gitignore_global"
-  "${HOME}/.config/starship.toml"
+# "${HOME}/.config/starship.toml"  # Boo handles prompt
   "${HOME}/Library/Application Support/com.mitchellh.ghostty/config"
 )
 

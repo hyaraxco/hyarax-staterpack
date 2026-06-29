@@ -23,8 +23,8 @@ deploy_dotfile() {
 deploy_dotfile "${DOTFILES_DIR}/.zshrc" "${HOME}/.zshrc"
 deploy_dotfile "${DOTFILES_DIR}/.gitignore_global" "${HOME}/.gitignore_global"
 
-ensure_dir "${HOME}/.config"
-deploy_dotfile "${DOTFILES_DIR}/starship.toml" "${HOME}/.config/starship.toml"
+# ensure_dir "${HOME}/.config"
+# deploy_dotfile "${DOTFILES_DIR}/starship.toml" "${HOME}/.config/starship.toml"  # Boo handles prompt
 
 GHOSTTY_DIR="${HOME}/Library/Application Support/com.mitchellh.ghostty"
 ensure_dir "${GHOSTTY_DIR}"

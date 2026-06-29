@@ -12,9 +12,9 @@ backup_file "${HOME}/.zshrc"
 backup_file "${HOME}/.gitconfig"
 backup_file "${HOME}/.gitignore_global"
 
-if [[ -f "${HOME}/.config/starship.toml" ]]; then
-  backup_file "${HOME}/.config/starship.toml"
-fi
+# if [[ -f "${HOME}/.config/starship.toml" ]]; then
+#   backup_file "${HOME}/.config/starship.toml"
+# fi  # Boo handles prompt
 
 GHOSTTY_CONFIG="${HOME}/Library/Application Support/com.mitchellh.ghostty/config"
 if [[ -f "$GHOSTTY_CONFIG" ]]; then

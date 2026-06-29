@@ -35,7 +35,7 @@ verify "lazygit"       lazygit
 verify "lazydocker"    lazydocker
 verify "thefuck"       thefuck
 verify "xh"            xh
-verify "Starship"      starship
+# verify "Starship"      starship  # Replaced by Boo theme prompt
 verify "Bun"           bun
 verify "PHP"           php
 verify "Composer"      composer

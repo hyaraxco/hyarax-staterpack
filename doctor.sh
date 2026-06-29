@@ -33,7 +33,7 @@ check_app() {
 # ── Terminal ─────────────────────────────────────────────────────────────────
 log_info "Terminal"
 check "Ghostty"    "ghostty"
-check "Starship"   "starship"
+# check "Starship"   "starship"  # Replaced by Boo theme prompt
 check_zinit() {
   if [[ -d "${HOME}/.local/share/zinit/zinit.git" ]]; then
     printf "  ${G}✔${N} %s\n" "Zinit"

@@ -18,7 +18,7 @@ brew "xh"
 brew "php"
 brew "composer"
 brew "openjdk"
-brew "starship"
+# brew "starship"  # Boo theme handles prompt natively
 brew "btop"
 brew "atuin"
 brew "mkcert"
