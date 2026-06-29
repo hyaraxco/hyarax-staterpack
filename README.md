@@ -17,8 +17,8 @@ A production-quality macOS developer bootstrap that transforms a fresh Apple Sil
 ## Quick Start
 
 ```bash
-git clone <your-repo-url> developer-bootstrap
-cd developer-bootstrap
+git clone https://github.com/hyaraxco/hyarax-staterpack.git
+cd hyarax-staterpack
 ./hyarax install
 ```
 
