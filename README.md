@@ -79,7 +79,7 @@ developer-bootstrap/
 ├── lib.sh              # Shared logging & helpers
 ├── scripts/
 │   ├── brew.sh         # Homebrew & Brewfile
-│   ├── shell.sh        # Zinit, Starship, Ghostty, Boo
+│   ├── shell.sh        # Zinit, Ghostty, Boo theme
 │   ├── runtime.sh      # Bun, PHP, Composer, Java
 │   ├── browser.sh      # Brave Browser
 │   ├── android.sh      # Android Studio, scrcpy
@@ -92,7 +92,7 @@ developer-bootstrap/
 │   ├── .zshrc
 │   ├── .gitconfig
 │   ├── .gitignore_global
-│   ├── starship.toml
+│   ├── ghostty.config
 │   └── ghostty.config
 ├── backups/            # Backup storage directory
 └── README.md
