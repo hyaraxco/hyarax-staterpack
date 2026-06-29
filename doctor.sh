@@ -88,8 +88,12 @@ check "9router"    "9router"
 
 # ── Networking ───────────────────────────────────────────────────────────────
 log_info "Networking"
-check "warp-cli"   "warp-cli"
-# warp-cli requires manual install from Cloudflare
+# warp-cli is Linux-only; macOS uses GUI app
+if cmd_exists warp-cli; then
+  printf "  ${G}✔${N} %s\n" "warp-cli"
+else
+  printf "  ${Y}～${N} %s\n" "Cloudflare WARP (GUI only on macOS)"
+fi
 
 # ── Utilities ────────────────────────────────────────────────────────────────
 log_info "Utilities"
