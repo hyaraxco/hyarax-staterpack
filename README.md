@@ -28,12 +28,12 @@ Restart your terminal and you're ready to code.
 
 | Command | Description |
 |---|---|
-| `./hyarax install` | Full system installation |
-| `./hyarax doctor` | Check all dependencies |
-| `./hyarax backup` | Backup existing configs |
-| `./hyarax restore` | Restore configs from backup |
-| `./hyarax update` | Update all managed software |
-| `./hyarax uninstall` | Remove managed configs (not packages) |
+| `hyarax install` | Full system installation |
+| `hyarax doctor` | Check all dependencies |
+| `hyarax backup` | Backup existing configs |
+| `hyarax restore` | Restore configs from backup |
+| `hyarax update` | Update all managed software |
+| `hyarax uninstall` | Remove managed configs (not packages) |
 
 ## What's Installed
 

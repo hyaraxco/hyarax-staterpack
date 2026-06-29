@@ -19,12 +19,12 @@ usage() {
 ${W}Hyarax Starterpack${N} — macOS Developer Bootstrap
 
 ${B}Usage:${N}
-  ./hyarax ${G}install${N}    Install everything from scratch
-  ./hyarax ${G}doctor${N}     Verify all dependencies are installed
-  ./hyarax ${G}backup${N}     Backup existing configurations
-  ./hyarax ${G}restore${N}    Restore configurations from backup
-  ./hyarax ${G}update${N}     Update all managed software
-  ./hyarax ${G}uninstall${N}  Remove managed configurations
+  hyarax ${G}install${N}    Install everything from scratch
+  hyarax ${G}doctor${N}     Verify all dependencies are installed
+  hyarax ${G}backup${N}     Backup existing configurations
+  hyarax ${G}restore${N}    Restore configurations from backup
+  hyarax ${G}update${N}     Update all managed software
+  hyarax ${G}uninstall${N}  Remove managed configurations
 
 ${B}Options:${N}
   -h, --help    Show this help message

@@ -47,7 +47,20 @@ log_step "Android Development"
 log_step "Dotfiles"
 "${HYARAX_DIR}/restore.sh"
 
-# ── 11. Verify ───────────────────────────────────────────────────────────────
+# ── 11. Hyarax CLI ────────────────────────────────────────────────────────────
+log_step "Hyarax CLI"
+ensure_dir "${HOME}/.local/bin"
+if [[ ! -L "${HOME}/.local/bin/hyarax" ]]; then
+  ln -sf "${HYARAX_DIR}/hyarax" "${HOME}/.local/bin/hyarax"
+  log_sub "Symlinked hyarax to ~/.local/bin/hyarax"
+fi
+if ! echo "$PATH" | tr ':' '\n' | grep -qx "${HOME}/.local/bin"; then
+  append_if_missing "${HOME}/.zshrc" 'export PATH="${HOME}/.local/bin:${PATH}"'
+  log_sub "Added ~/.local/bin to PATH in .zshrc"
+fi
+log_ok "Hyarax CLI ready — use: hyarax install"
+
+# ── 12. Verify ───────────────────────────────────────────────────────────────
 log_step "Verification"
 "${HYARAX_DIR}/scripts/verify.sh"
 
