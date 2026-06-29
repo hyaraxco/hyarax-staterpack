@@ -37,32 +37,17 @@ Restart your terminal and you're ready to code.
 
 ## What's Installed
 
-### Terminal
-Ghostty · Boo Theme · Zinit · JetBrains Mono Nerd Font
-
-### Browser
-Brave Browser
-
-### CLI Tools
-Git · GitHub CLI · eza · bat · fd · ripgrep · tree · jq · zoxide · fzf · lazygit · lazydocker · thefuck · xh
-
-### Runtimes
-Bun (with node/npm/npx symlinks) · PHP · Composer · OpenJDK
-
-### Android
-Android Studio · Platform Tools · scrcpy
-
-### Container
-OrbStack
-
-### AI
-OpenCode CLI · 9router
-
-### Networking
-warp-cli
-
-### Utilities
-btop · atuin · mkcert
+| Category | Tools |
+|---|---|
+| **Terminal** | Ghostty, Boo Theme, Zinit, JetBrains Mono Nerd Font |
+| **Browser** | Brave Browser |
+| **CLI** | Git, GitHub CLI, eza, bat, fd, ripgrep, tree, jq, zoxide, fzf, lazygit, lazydocker, thefuck, xh |
+| **Runtimes** | Bun (w/ node/npm/npx symlinks), PHP, Composer, OpenJDK |
+| **Android** | Android Studio, Platform Tools, scrcpy |
+| **Container** | OrbStack |
+| **AI** | OpenCode CLI, 9router |
+| **Networking** | Cloudflare WARP |
+| **Utilities** | btop, atuin, mkcert |
 
 ## Project Structure
 
